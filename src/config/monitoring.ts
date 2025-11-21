@@ -13,6 +13,6 @@ export const monitoringConfig = {
   // Toggle visibility of Visualize page in navigation
   // true = Visualize button is visible
   // false = Visualize button is hidden
-  visualisepage: false,
+  visualisepage: true,
 };
 
