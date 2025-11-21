@@ -1,6 +1,7 @@
 import { NavLink } from "@/components/NavLink";
 import { Activity, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
+import { monitoringConfig } from "@/config/monitoring";
 
 export const Navigation = () => {
   return (
@@ -30,14 +31,16 @@ export const Navigation = () => {
             <Activity className="w-4 h-4" />
             Dashboard
           </NavLink>
-          <NavLink
-            to="/visualize"
-            className="px-6 py-2.5 rounded-lg font-medium transition-all duration-200 flex items-center gap-2 hover:bg-secondary"
-            activeClassName="bg-primary text-primary-foreground shadow-lg"
-          >
-            <BarChart3 className="w-4 h-4" />
-            Visualize
-          </NavLink>
+          {monitoringConfig.visualisepage && (
+            <NavLink
+              to="/visualize"
+              className="px-6 py-2.5 rounded-lg font-medium transition-all duration-200 flex items-center gap-2 hover:bg-secondary"
+              activeClassName="bg-primary text-primary-foreground shadow-lg"
+            >
+              <BarChart3 className="w-4 h-4" />
+              Visualize
+            </NavLink>
+          )}
         </div>
       </div>
     </motion.nav>
