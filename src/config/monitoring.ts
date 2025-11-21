@@ -9,5 +9,10 @@ export const monitoringConfig = {
   // Number of historical data points to keep for charts
   // Used in the Visualize page for graph rendering
   logs: 20,
+  
+  // Toggle visibility of Visualize page in navigation
+  // true = Visualize button is visible
+  // false = Visualize button is hidden
+  visualisepage: true,
 };
 
